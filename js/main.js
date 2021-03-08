@@ -40,7 +40,7 @@ function getOriginalImage(event) {
   const imageOrigin = event.target.dataset.source;
   const imageAlt = event.target.alt;
   const dataIndex = event.target.dataset.index;
-  
+
   modalOpen(imageOrigin, imageAlt, dataIndex);
 };
 
