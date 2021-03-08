@@ -25,7 +25,7 @@ function addGalleryItems(gallery) {
     />
   </a>
 </li>`;
-  }).join('');
+  }).join("");
 };
 
 galleryArr.addEventListener('click', getOriginalImage);
@@ -47,7 +47,7 @@ function getOriginalImage(event) {
 function keyDownModuleWindow(event) {
     if (event.code === 'Escape') {
     return modalClose();
-  }  return;
+  };
 };
 
 
