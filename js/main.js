@@ -13,7 +13,6 @@ galleryArr.addEventListener('click', getOriginalImage);
 closeModalBtnRef.addEventListener('click', modalClose);
 modaleOverlayRef.addEventListener('click', modalClose);
 
-
 function addGalleryItems(gallery) {
   return gallery.map(({ original, preview, description }) => {
     return `<li class="gallery__item">
@@ -45,11 +44,10 @@ function getOriginalImage(event) {
 };
 
 function keyDownModuleWindow(event) {
-    if (event.code === 'Escape') {
+  if (event.code === 'Escape') {
     return modalClose();
   };
 };
-
 
 function modalOpen(image, alt, index) {
   modalWindowRef.classList.add('is-open');
