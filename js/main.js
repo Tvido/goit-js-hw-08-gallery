@@ -13,6 +13,7 @@ galleryArr.addEventListener('click', getOriginalImage);
 closeModalBtnRef.addEventListener('click', modalClose);
 modaleOverlayRef.addEventListener('click', modalClose);
 
+
 function addGalleryItems(gallery) {
   return gallery.map(({ original, preview, description }) => {
     return `<li class="gallery__item">
@@ -45,8 +46,9 @@ function getOriginalImage(event) {
 function keyDownModuleWindow(event) {
     if (event.code === 'Escape') {
     return modalClose();
-  } return;
+  }  return;
 };
+
 
 function modalOpen(image, alt, index) {
   modalWindowRef.classList.add('is-open');
@@ -55,7 +57,7 @@ function modalOpen(image, alt, index) {
   modalImageRef.dataset.index = index;
 
   window.addEventListener('keydown', event => keyDownModuleWindow(event));
-  };
+};
 
 function modalClose() {
   modalWindowRef.classList.remove('is-open');
