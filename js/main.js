@@ -43,7 +43,7 @@ function getOriginalImage(event) {
   modalOpen(imageOrigin, imageAlt, dataIndex);
 };
 
-function keyDownModuleWindow(event) {
+function keydownModuleWindow(event) {
   if (event.code === 'Escape') {
     return modalClose();
   };
@@ -55,7 +55,7 @@ function modalOpen(image, alt, index) {
   modalImageRef.alt = alt;
   modalImageRef.dataset.index = index;
 
-  window.addEventListener('keydown', event => keyDownModuleWindow(event));
+  window.addEventListener('keydown', event => keydownModuleWindow(event));
 };
 
 function modalClose() {
@@ -64,5 +64,5 @@ function modalClose() {
   modalImageRef.alt = '';
   delete modalImageRef.dataset.index;
 
-  window.removeEventListener('keydown', event => keyDownModuleWindow(event));
+  window.removeEventListener('keydown', event => keydownModuleWindow(event));
 };
