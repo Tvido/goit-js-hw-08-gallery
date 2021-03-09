@@ -54,15 +54,11 @@ function modalOpen(image, alt, index) {
   modalImageRef.src = image;
   modalImageRef.alt = alt;
   modalImageRef.dataset.index = index;
-
   window.addEventListener('keydown', event => keydownModuleWindow(event));
 };
 
 function modalClose() {
   modalWindowRef.classList.remove('is-open');
-  modalImageRef.src = '';
-  modalImageRef.alt = '';
   delete modalImageRef.dataset.index;
-
   window.removeEventListener('keydown', event => keydownModuleWindow(event));
 };
